@@ -28,11 +28,65 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav p {
+  color: white;
+  font-family: helvetica;
+}
+
+.nav p:hover {
+  background-color: #494d54;
+  width: 500%;
+}
+
+.nav span {
+  color: rgb(185, 184, 184);
+  font-family: helvetica;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.mobileNav {  
+
+  animation: .5s ease-out 0s 1 slideInFromRight;
+  
+  background: #333;
+  padding: 30px;
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hideNav {  
+  right: -100%;
+  animation: .5s ease-out 0s 1 slideOutToRight;
+  
+  background: #333;
+  padding: 30px;
+}
+
+.contentFont {
+  font-family: Cochin;
+}
+
+.blinkMe {
+  animation: blinker 1s steps(2) infinite;
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 0;
   }
 }
